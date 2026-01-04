@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posyandu Digital - Layanan Kesehatan Ibu dan Anak</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M12 2L2 7L12 12L22 7L12 2Z"
+              stroke="#10b981"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M2 17L12 22L22 17"
+              stroke="#10b981"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M2 12L12 17L22 12"
+              stroke="#10b981"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>Posyandu Digital</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#beranda" class="nav-link">Beranda</a></li>
+          <li><a href="#layanan" class="nav-link">Layanan</a></li>
+          <li><a href="#pantau" class="nav-link">Pantau Data</a></li>
+          <li><a href="#jadwal" class="nav-link">Jadwal</a></li>
+          <li><a href="#kontak" class="nav-link">Kontak</a></li>
+        </ul>
+        <div class="nav-toggle" id="nav-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">Selamat Datang di Posyandu Digital</h1>
+          <p class="hero-subtitle">
+            Platform modern untuk pemantauan kesehatan ibu dan anak yang
+            terintegrasi dan mudah diakses
+          </p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary" onclick="scrollToSection('jadwal')">
+              Daftar Sekarang
+            </button>
+            <button
+              class="btn btn-outline"
+              onclick="scrollToSection('layanan')"
+            >
+              Pelajari Lebih Lanjut
+            </button>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-card">
+            <div class="card-icon">👶</div>
+            <h3>5,234</h3>
+            <p>Bayi Terdaftar</p>
+          </div>
+          <div class="hero-card">
+            <div class="card-icon">🤱</div>
+            <h3>3,892</h3>
+            <p>Ibu Hamil</p>
+          </div>
+          <div class="hero-card">
+            <div class="card-icon">💊</div>
+            <h3>12,456</h3>
+            <p>Imunisasi</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="layanan" class="services">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Layanan Kami</h2>
+          <p class="section-subtitle">
+            Berbagai layanan kesehatan untuk mendukung tumbuh kembang anak
+            optimal
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card" onclick="openServiceDetail('imunisasi')">
+            <div class="service-icon">💉</div>
+            <h3>Imunisasi</h3>
+            <p>
+              Jadwal imunisasi lengkap sesuai usia anak dengan reminder otomatis
+            </p>
+            <span class="service-link">Pelajari →</span>
+          </div>
+          <div class="service-card" onclick="openServiceDetail('penimbangan')">
+            <div class="service-icon">⚖️</div>
+            <h3>Penimbangan Berat Badan</h3>
+            <p>Pantau pertumbuhan berat badan anak dengan grafik interaktif</p>
+            <span class="service-link">Pelajari →</span>
+          </div>
+          <div class="service-card" onclick="openServiceDetail('konsultasi')">
+            <div class="service-icon">👩‍⚕️</div>
+            <h3>Konsultasi Kesehatan</h3>
+            <p>Konsultasi langsung dengan bidan dan tenaga kesehatan</p>
+            <span class="service-link">Pelajari →</span>
+          </div>
+          <div class="service-card" onclick="openServiceDetail('gizi')">
+            <div class="service-icon">🥗</div>
+            <h3>Pemantauan Gizi</h3>
+            <p>Rekomendasi makanan bergizi untuk ibu hamil dan balita</p>
+            <span class="service-link">Pelajari →</span>
+          </div>
+          <div class="service-card" onclick="openServiceDetail('vitamin')">
+            <div class="service-icon">💊</div>
+            <h3>Pemberian Vitamin</h3>
+            <p>Tracking pemberian vitamin A dan suplemen lainnya</p>
+            <span class="service-link">Pelajari →</span>
+          </div>
+          <div class="service-card" onclick="openServiceDetail('edukasi')">
+            <div class="service-icon">📚</div>
+            <h3>Edukasi Kesehatan</h3>
+            <p>Artikel dan video edukasi tentang kesehatan ibu dan anak</p>
+            <span class="service-link">Pelajari →</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data Monitoring Section -->
+    <section id="pantau" class="monitoring">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Pantau Data Kesehatan</h2>
+          <p class="section-subtitle">
+            Pantau perkembangan kesehatan anak secara real-time
+          </p>
+        </div>
+
+        <!-- Tab Navigation -->
+        <div class="tab-nav">
+          <button class="tab-btn active" onclick="switchTab('grafik')">
+            Grafik Pertumbuhan
+          </button>
+          <button class="tab-btn" onclick="switchTab('data')">Data Anak</button>
+          <button class="tab-btn" onclick="switchTab('riwayat')">
+            Riwayat Kunjungan
+          </button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+          <div id="grafik" class="tab-pane active">
+            <div class="chart-container">
+              <div class="chart-header">
+                <h3>Grafik Pertumbuhan Berat Badan</h3>
+                <select class="chart-select" onchange="updateChart(this.value)">
+                  <option value="berat">Berat Badan</option>
+                  <option value="tinggi">Tinggi Badan</option>
+                  <option value="lingkar">Lingkar Kepala</option>
+                </select>
+              </div>
+              <div class="chart">
+                <div class="chart-bars">
+                  <div class="bar" style="height: 60%;">
+                    <span class="bar-label">Jan</span>
+                    <span class="bar-value">3.2kg</span>
+                  </div>
+                  <div class="bar" style="height: 70%;">
+                    <span class="bar-label">Feb</span>
+                    <span class="bar-value">3.8kg</span>
+                  </div>
+                  <div class="bar" style="height: 75%;">
+                    <span class="bar-label">Mar</span>
+                    <span class="bar-value">4.1kg</span>
+                  </div>
+                  <div class="bar" style="height: 85%;">
+                    <span class="bar-label">Apr</span>
+                    <span class="bar-value">4.5kg</span>
+                  </div>
+                  <div class="bar" style="height: 90%;">
+                    <span class="bar-label">Mei</span>
+                    <span class="bar-value">4.8kg</span>
+                  </div>
+                  <div class="bar" style="height: 95%;">
+                    <span class="bar-label">Jun</span>
+                    <span class="bar-value">5.1kg</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="data" class="tab-pane">
+            <div class="data-grid">
+              <div class="data-card">
+                <h4>Data Identitas Anak</h4>
+                <div class="data-item">
+                  <label>Nama Lengkap:</label>
+                  <input type="text" class="data-input" value="Ahmad Rizki" />
+                </div>
+                <div class="data-item">
+                  <label>Tanggal Lahir:</label>
+                  <input type="date" class="data-input" value="2023-01-15" />
+                </div>
+                <div class="data-item">
+                  <label>Jenis Kelamin:</label>
+                  <select class="data-input">
+                    <option>Laki-laki</option>
+                    <option>Perempuan</option>
+                  </select>
+                </div>
+                <button class="btn btn-primary" onclick="saveData()">
+                  Simpan Data
+                </button>
+              </div>
+              <div class="data-card">
+                <h4>Data Orang Tua</h4>
+                <div class="data-item">
+                  <label>Nama Ibu:</label>
+                  <input
+                    type="text"
+                    class="data-input"
+                    value="Siti Nurhaliza"
+                  />
+                </div>
+                <div class="data-item">
+                  <label>Nama Ayah:</label>
+                  <input type="text" class="data-input" value="Budi Santoso" />
+                </div>
+                <div class="data-item">
+                  <label>No. Telepon:</label>
+                  <input type="tel" class="data-input" value="08123456789" />
+                </div>
+                <button class="btn btn-primary" onclick="saveData()">
+                  Simpan Data
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="riwayat" class="tab-pane">
+            <div class="history-list">
+              <div class="history-item">
+                <div class="history-date">15 Oktober 2025</div>
+                <div class="history-content">
+                  <h4>Pemeriksaan Rutin</h4>
+                  <p>Berat: 5.1kg | Tinggi: 62cm | Status: Sehat</p>
+                  <span class="history-status success">Selesai</span>
+                </div>
+              </div>
+              <div class="history-item">
+                <div class="history-date">15 November 2025</div>
+                <div class="history-content">
+                  <h4>Imunisasi DPT-HB-Hib 3</h4>
+                  <p>Vaksinasi lengkap, tidak ada reaksi</p>
+                  <span class="history-status success">Selesai</span>
+                </div>
+              </div>
+              <div class="history-item">
+                <div class="history-date">15 Desember 2025</div>
+                <div class="history-content">
+                  <h4>Pemberian Vitamin A</h4>
+                  <p>Dosis biru (100.000 IU)</p>
+                  <span class="history-status success">Selesai</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="jadwal" class="schedule">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Jadwal Kegiatan</h2>
+          <p class="section-subtitle">
+            Daftar untuk kegiatan Posyandu terdekat
+          </p>
+        </div>
+
+        <div class="schedule-container">
+          <div class="calendar">
+            <div class="calendar-header">
+              <button class="calendar-nav" onclick="changeMonth(-1)">‹</button>
+              <h3 id="currentMonth">Januari 2025</h3>
+              <button class="calendar-nav" onclick="changeMonth(2)">›</button>
+            </div>
+            <div class="calendar-grid">
+              <div class="calendar-day-header">Min</div>
+              <div class="calendar-day-header">Sen</div>
+              <div class="calendar-day-header">Sel</div>
+              <div class="calendar-day-header">Rab</div>
+              <div class="calendar-day-header">Kam</div>
+              <div class="calendar-day-header">Jum</div>
+              <div class="calendar-day-header">Sab</div>
+            </div>
+            <!-- Calendar days will be generated by JavaScript -->
+            <div id="calendarDays"></div>
+          </div>
+
+          <div class="schedule-form">
+            <h3>Daftar Kegiatan</h3>
+            <form onsubmit="submitSchedule(event)">
+              <div class="form-group">
+                <label>Nama Anak</label>
+                <input type="text" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label>Tanggal Lahir</label>
+                <input type="date" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label>Jenis Kegiatan</label>
+                <select class="form-control" required>
+                  <option>Pilih Kegiatan</option>
+                  <option>Imunisasi</option>
+                  <option>Penimbangan</option>
+                  <option>Konsultasi</option>
+                  <option>Pemberian Vitamin</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Tanggal Kunjungan</label>
+                <input type="date" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label>Waktu</label>
+                <select class="form-control" required>
+                  <option>Pilih Waktu</option>
+                  <option>08:00 - 09:00</option>
+                  <option>09:00 - 10:00</option>
+                  <option>10:00 - 11:00</option>
+                  <option>11:00 - 12:00</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary full-width">
+                Daftar Sekarang
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Hubungi Kami</h2>
+          <p class="section-subtitle">Kami siap membantu Anda</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <h4>Alamat</h4>
+                <p>
+                  Jl. H.Abd.Kadir<br />Kelurahan Surutanga<br />Kota Palopo,
+                  91911
+                </p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div>
+                <h4>Telepon</h4>
+                <p>0813-4235-8950<br />0813-4235-8950 (WhatsApp)</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div>
+                <h4>Email</h4>
+                <p>info@posyandudigital.id<br />support@posyandudigital.id</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🕐</div>
+              <div>
+                <h4>Jam Operasional</h4>
+                <p>Senin - Kamis: 08:00 - 16:00<br />Jumat: 08:00 - 12:00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <h3>Kirim Pesan</h3>
+            <form onsubmit="sendMessage(event)">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Nama Lengkap"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="tel"
+                  class="form-control"
+                  placeholder="Nomor Telepon"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <select class="form-control" required>
+                  <option>Pilih Subjek</option>
+                  <option>Pertanyaan Umum</option>
+                  <option>Pendaftaran</option>
+                  <option>Keluhan</option>
+                  <option>Saran</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  rows="5"
+                  placeholder="Pesan Anda"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary full-width">
+                Kirim Pesan
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Posyandu Digital</h3>
+            <p>
+              Platform digital untuk mendukung kesehatan ibu dan anak Indonesia
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link">f</a>
+              <a href="#" class="social-link">t</a>
+              <a href="#" class="social-link">ig</a>
+              <a href="#" class="social-link">yt</a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Link Cepat</h4>
+            <ul>
+              <li><a href="#beranda">Beranda</a></li>
+              <li><a href="#layanan">Layanan</a></li>
+              <li><a href="#pantau">Pantau Data</a></li>
+              <li><a href="#jadwal">Jadwal</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Layanan</h4>
+            <ul>
+              <li><a href="#">Imunisasi</a></li>
+              <li><a href="#">Konsultasi</a></li>
+              <li><a href="#">Pemantauan Gizi</a></li>
+              <li><a href="#">Edukasi</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Newsletter</h4>
+            <p>Dapatkan tips kesehatan terbaru</p>
+            <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+              <input type="email" placeholder="Email Anda" required />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Posyandu Digital. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle">Detail Layanan</h2>
+        <div id="modalBody">
+          <!-- Content will be inserted here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification">
+      <div class="notification-content">
+        <span id="notificationMessage"></span>
+        <button onclick="closeNotification()">×</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
